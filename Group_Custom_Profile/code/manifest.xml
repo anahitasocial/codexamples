@@ -8,7 +8,7 @@
     <authorurl>http://www.Anahitapolis.com</authorurl>
     <description>Custom profile for group actors</description>
     <administration>
-        <files folder="administrator/components/com_groupcustomprofile">
+        <files folder="administrator/com_groupcustomprofile">
             <folder>install</folder> 
         </files>
     </administration>
