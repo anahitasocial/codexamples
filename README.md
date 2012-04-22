@@ -1,4 +1,4 @@
-CustomProfile
+Anahita ™ Code Examples
 =============
 
-Custom profile for group actors
+This repositories contains different code examples related to Anahita ™ Social Networking Framework & Platform
