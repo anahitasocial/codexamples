@@ -16,6 +16,8 @@
 		  </fileset>
 		</copy>
 		<mkdir dir="${path}" />
+		<delete file="${path}/${name}.tar.gz" />
+		<delete file="${path}/${name}.zip" />
 		<tar destfile="${path}/${name}.tar.gz" basedir="${tmp}" compression="gzip" />
 		<zip destfile="${path}/${name}.zip" basedir="${tmp}" />
 		<delete dir="${tmp}" includeemptydirs="true" />
