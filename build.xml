@@ -1,0 +1,23 @@
+<?xml version="1.0" ?>  
+<project name="Examples" basedir="." default="build_all">
+	<property name="tmp" value="./tmp" />
+	<property name="name" value="package" />
+	<target name="build_all">
+		<phingcall target="build_groupcustomprofile" />
+	</target>
+	<target name="build_groupcustomprofile">
+		<property name="path" value="./Group_Custom_Profile" />
+		<phingcall target="build" />
+	</target>
+	<target name="build">
+		<copy todir="${tmp}" >
+		  <fileset dir="${path}/code">
+		  	<exclude name=".**/" />
+		  </fileset>
+		</copy>
+		<mkdir dir="${path}" />
+		<tar destfile="${path}/${name}.tar.gz" basedir="${tmp}" compression="gzip" />
+		<zip destfile="${path}/${name}.zip" basedir="${tmp}" />
+		<delete dir="${tmp}" includeemptydirs="true" />
+	</target>
+</project>
