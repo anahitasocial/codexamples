@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<install type="component" method="upgrade">
+    <name>Groupcustomprofile</name>
+    <author>Anahita Social Networking Project</author>
+    <copyright>(C) 2012 rmdStudio, Peerglobe Technology</copyright>
+    <license>GPL3 - http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authoremail>info@anahitapolis.com</authoremail>
+    <authorurl>http://www.Anahitapolis.com</authorurl>
+    <description>Custom profile for group actors</description>
+    <administration>
+        <files folder="administrator/components/com_groupcustomprofile">
+            <folder>install</folder> 
+        </files>
+    </administration>
+    <install>
+        <sql>
+            <file charset="utf8" driver="mysql">install/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall>
+        <sql>
+            <file charset="utf8" driver="mysql">install/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+    <bundles> 
+        <bundle>plugins/profile</bundle>
+    </bundles>
+</install>

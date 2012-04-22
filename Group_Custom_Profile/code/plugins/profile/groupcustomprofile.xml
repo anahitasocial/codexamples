@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" group="profile" method="upgrade">
+    <name>Profile - Group Custom Profile</name>
+    <author>Anahita Social Networking Project</author>
+    <copyright>rmdStudio, Peerglobe Technology</copyright>
+    <license>GPL3 - http://www.gnu.org/licenses/gpl-3.0.html</license>
+    <authoremail>info@anahitapolis.com</authoremail>
+    <authorurl>www.Anahitapolis.com</authorurl>
+    <description>Group Custom Profile</description>
+    <files>
+        <filename plugin="groupcustomprofile">groupcustomprofile.php</filename>
+    </files>        
+</install>
