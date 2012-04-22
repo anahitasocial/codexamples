@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>  
-<install type="component" method="upgrade" version="1.6">
+<install type="component" version="1.6" method="upgrade">
     <name>Groupcustomprofile</name>
     <author>Anahita Social Networking Project</author>
     <copyright>(C) 2012 rmdStudio, Peerglobe Technology</copyright>
@@ -7,6 +7,7 @@
     <authoremail>info@anahitapolis.com</authoremail>
     <authorurl>http://www.Anahitapolis.com</authorurl>
     <description>Custom profile for group actors</description>
+    <version>1.0</version>
     <administration>
         <files folder="administrator/com_groupcustomprofile">
             <folder>install</folder> 

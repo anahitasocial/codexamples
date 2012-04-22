@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<install type="plugin" group="profile" method="upgrade">
+<install type="plugin" group="profile" version="1.6" method="upgrade">
     <name>Profile - Group Custom Profile</name>
     <author>Anahita Social Networking Project</author>
     <copyright>rmdStudio, Peerglobe Technology</copyright>
