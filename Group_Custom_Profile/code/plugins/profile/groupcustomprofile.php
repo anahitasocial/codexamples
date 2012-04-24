@@ -66,14 +66,16 @@ class PlgProfileGroupcustomprofile extends PlgProfileAbstract
 	        //to see the profile information, you can do $profile->inspect();
 	        $profile->reset();
 	        
-	        $fileds['Custom Field 1'] = $profile->customfield1;
-	        $fileds['Custom Field 2'] = $profile->customfield2;
-	        $fileds['Custom Field 3'] = $profile->customfield3;
-	        $fileds['Custom Field 4'] = $profile->customfield4;
-	        $fileds['Custom Field 5'] = $profile->customfield5;
+	        $section1['Custom Field 1'] = $profile->customfield1;
+	        $section1['Custom Field 2'] = $profile->customfield2;
+	        $section1['Custom Field 3'] = $profile->customfield3;
+	        $section2['Custom Field 4'] = $profile->customfield4;
+	        $section3['Custom Field 5'] = $profile->customfield5;
 	        	        
 	        $config->profile->append(array(
-	                'Section Label' => $fileds
+	             'Section 1' => $section1,
+	             'Section 2' => $section2,
+	             'Section 3' => $section3
 	        ));	        
 	    }		
 	}
@@ -94,8 +96,10 @@ class PlgProfileGroupcustomprofile extends PlgProfileAbstract
 	    if ( is($actor,'ComGroupsDomainEntityGroup') )
 	    {
 	        //html helper.
-	        $html    = KFactory::get('lib.anahita.app.template.helper.html');
-	        $fileds  = array();
+	        $html      = KFactory::get('lib.anahita.app.template.helper.html');
+	        $section1  = array();
+	        $section2  = array();
+	        $section3  = array();	        
 	        
 	        //get the profile if exists if not then return an empty profile
 	        //an empty profile has empty values
@@ -108,14 +112,16 @@ class PlgProfileGroupcustomprofile extends PlgProfileAbstract
 	        //creating the fields using the html template helper
 	        //we namespace the textfields with groupcustomprofile that way to ensure
 	        //no conflict occurs
-	        $fileds['Custom Field 1'] = $html->textfield('groupcustomprofile[customfield1]', $profile->customfield1);
-	        $fileds['Custom Field 2'] = $html->textfield('groupcustomprofile[customfield2]', $profile->customfield2);
-	        $fileds['Custom Field 3'] = $html->textfield('groupcustomprofile[customfield3]', $profile->customfield3);
-	        $fileds['Custom Field 4'] = $html->textfield('groupcustomprofile[customfield4]', $profile->customfield4);
-	        $fileds['Custom Field 5'] = $html->textfield('groupcustomprofile[customfield5]', $profile->customfield5);
+	        $section1['Custom Field 1'] = $html->textfield('groupcustomprofile[customfield1]', $profile->customfield1);
+	        $section1['Custom Field 2'] = $html->textfield('groupcustomprofile[customfield2]', $profile->customfield2);
+	        $section1['Custom Field 3'] = $html->textfield('groupcustomprofile[customfield3]', $profile->customfield3);
+	        $section2['Custom Field 4'] = $html->textfield('groupcustomprofile[customfield4]', $profile->customfield4);
+	        $section3['Custom Field 5'] = $html->textfield('groupcustomprofile[customfield5]', $profile->customfield5);
 	    
 	        $config->profile->append(array(
-	             'Section Label' => $fileds
+	             'Section 1' => $section1,
+	             'Section 2' => $section2,
+	             'Section 3' => $section3
 	        ));
 	    }
 	}		
