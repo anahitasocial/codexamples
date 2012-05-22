@@ -82,7 +82,6 @@ class ComRestauthControllerSession extends ComAppControllerView
             
             return $this->getView()->set('data', $data)->display();
         }
-        
     }
         
     /**
