@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="component"  method="upgrade">
+    <name>Invite</name>     
+    <administration> 
+	    <languages folder="administrator/language">
+	        <language tag="en-GB">en-GB.com_invite.ini</language>
+	    </languages>    
+        <files folder="administrator/components/com_invite">
+			<file>invite.php</file>
+        </files>
+    </administration>
+    <languages folder="site/language">
+        <language tag="en-GB">en-GB.com_invite.ini</language>
+    </languages>
+    <files folder="site/components/com_invite">
+		<folder>controllers</folder>
+		<folder>domains</folder>
+		<folder>views</folder>		
+		<file>invite.php</file>
+    </files>
+</install>
