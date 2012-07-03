@@ -63,5 +63,31 @@
         ));
 
         parent::_initialize($config);
-    }    
+    }
+        
+    /**
+     * Creates a person object from the request 
+     * 
+     * @return JUser
+     */
+    public function createUser()
+    {    
+        //create a randome username from the email
+        $username = preg_replace('/@.*/','', $this->email).rand(0, 10000);
+        //create a randome password 
+        $password = uniqid();
+        
+        $user     = JUser::getInstance();
+        $data     = array(
+            'username' => $username,
+            'name'     => $this->name,
+            'password'  => $password,
+            'password2' => $password, //Juser requires a confirmation password
+            'email'    => $this->email.rand(0,100000)
+        );
+       
+        $user->bind($data);
+        
+        return $user;
+    }
  }
